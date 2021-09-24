@@ -1,0 +1,33 @@
+#define DISPLAY_WIDTH 100
+#define DISPLAY_HEIGHT 64
+
+#define LETTER_WIDTH    6
+#define LETTER_HEIGHT  10
+
+#define CORNER_LEFT     0
+#define CORNER_CENTER   1
+#define CORNER_RIGHT    2
+
+#define CORNER_TOP      0
+#define CORNER_BOTTOM   2
+
+char textWidth(string text) {
+    return (ArrayLen(text) - 1) * LETTER_WIDTH;
+}
+
+void CornerDrawText(string text, char horizontal_corner, char vertical_corner) {
+    char xCoord;
+    char yCoord;
+    switch (horizontal_corner) {
+        case CORNER_LEFT:   { xCoord = 0; break; }
+        case CORNER_CENTER: { xCoord = (DISPLAY_WIDTH - textWidth(text)) / 2; break; }
+        case CORNER_RIGHT:  { xCoord = DISPLAY_WIDTH - textWidth(text) - 1; break; }
+    }
+    
+    switch (vertical_corner) {
+        case CORNER_TOP:     { yCoord = DISPLAY_HEIGHT - 1; break; }
+        case CORNER_CENTER:  { yCoord = (DISPLAY_HEIGHT - LETTER_HEIGHT) / 2; break; }
+        case CORNER_BOTTOM:  { yCoord = 0; break; }
+    }
+    TextOut(xCoord, yCoord, text);
+}
