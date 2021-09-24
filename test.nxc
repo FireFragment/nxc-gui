@@ -14,5 +14,13 @@ task main()
     CornerDrawText("TL", CORNER_LEFT, CORNER_TOP);
     CornerDrawText("TC", CORNER_CENTER, CORNER_TOP);
     CornerDrawText("TR", CORNER_RIGHT, CORNER_TOP);
+    
+    Wait(3000);
+    ClearScreen();
+    
+    // ButtonLegend sample
+    CornerDrawText("15", CORNER_CENTER, CORNER_CENTER);
+    ButtonLegend("Less", "DONE", "More");
+    
     Wait(3000);
 }

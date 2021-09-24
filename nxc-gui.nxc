@@ -31,3 +31,9 @@ void CornerDrawText(string text, char horizontal_corner, char vertical_corner) {
     }
     TextOut(xCoord, yCoord, text);
 }
+
+void ButtonLegend(string left, string center, string right) {
+    CornerDrawText(left, CORNER_LEFT, CORNER_BOTTOM);
+    CornerDrawText(center, CORNER_CENTER, CORNER_BOTTOM);
+    CornerDrawText(right, CORNER_RIGHT, CORNER_BOTTOM);
+}
