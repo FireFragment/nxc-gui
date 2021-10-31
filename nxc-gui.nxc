@@ -60,7 +60,7 @@ unsigned char WaitForButtonPress(string left, string center, string right) {
 int NumberPicker(int defaultVal, string name, char min = 0, char max = 99) {
     int currentVal = defaultVal < 1 ? 1 : defaultVal;
     
-    
+    ClearScreen();
     CornerDrawText(name, CORNER_CENTER, CORNER_TOP);
     ButtonLegend("Less", "DONE", "More");
     
