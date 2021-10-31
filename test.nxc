@@ -22,7 +22,8 @@ task main()
     Wait(3000);
     ClearScreen();
     
-    // ButtonLegend sample
-    ButtonLegend("Left", "Cent.", "Right");
+    // WaitForButtonPress sample
+    char btn = WaitForButtonPress("Left", "Cent.", "Right");
+    CornerDrawText(NumToStr(btn) + " pressed", CORNER_CENTER, CORNER_CENTER);
     Wait(3000);
 }
