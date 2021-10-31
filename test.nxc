@@ -2,6 +2,10 @@
 
 task main()
 {
+    // NumberPicker sample
+    NumberPicker(10, "Favorite number:", 0, 99);
+    ClearScreen();
+    
     // CornerDrawText sample
     CornerDrawText("BL", CORNER_LEFT, CORNER_BOTTOM);
     CornerDrawText("BC", CORNER_CENTER, CORNER_BOTTOM);
@@ -19,8 +23,6 @@ task main()
     ClearScreen();
     
     // ButtonLegend sample
-    CornerDrawText("15", CORNER_CENTER, CORNER_CENTER);
-    ButtonLegend("Less", "DONE", "More");
-    
+    ButtonLegend("Left", "Cent.", "Right");
     Wait(3000);
 }

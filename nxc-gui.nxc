@@ -37,3 +37,47 @@ void ButtonLegend(string left, string center, string right) {
     CornerDrawText(center, CORNER_CENTER, CORNER_BOTTOM);
     CornerDrawText(right, CORNER_RIGHT, CORNER_BOTTOM);
 }
+
+int NumberPicker(int defaultVal, string name, char min = 0, char max = 99) {
+    int currentVal = defaultVal < 1 ? 1 : defaultVal;
+    
+    
+    CornerDrawText(name, CORNER_CENTER, CORNER_TOP);
+    ButtonLegend("Less", "DONE", "More");
+    
+    // Determine maxVal
+    while (true) {
+        CornerDrawText("   ", CORNER_CENTER, CORNER_CENTER);
+        CornerDrawText(NumToStr(currentVal), CORNER_CENTER, CORNER_CENTER);
+        
+        // Wait for button press
+        while (!ButtonPressed(BTNLEFT, false) && !ButtonPressed(BTNCENTER, false) && !ButtonPressed(BTNRIGHT, false))
+            Wait(50);
+        
+        
+        // Left button pressed
+        if (ButtonPressed(BTNLEFT, false) && currentVal > min) {
+            currentVal -= 1;
+            
+            ButtonLegend("Less", "DONE", "More");
+            if (currentVal <= min)
+                ButtonLegend("    ", "DONE", "More");
+        }
+        // Right button pressed
+        else if (ButtonPressed(BTNRIGHT, false) && currentVal < max) {
+            currentVal += 1;
+            
+            ButtonLegend("Less", "DONE", "More");
+            if (currentVal <= min)
+                ButtonLegend("Less", "DONE", "    ");
+        }
+        // Center button pressed
+        else if (ButtonPressed(BTNCENTER, false))
+            return currentVal;
+        
+        while (ButtonPressed(BTNLEFT, false) || ButtonPressed(BTNCENTER, false) || ButtonPressed(BTNRIGHT, false))
+            Wait(50);
+    }
+        
+    int maxVal = currentVal;
+}
