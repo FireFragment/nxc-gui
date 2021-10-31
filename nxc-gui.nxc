@@ -43,12 +43,18 @@ unsigned char WaitForButtonPress(string left, string center, string right) {
     while (!ButtonPressed(BTNLEFT, false) && !ButtonPressed(BTNCENTER, false) && !ButtonPressed(BTNRIGHT, false))
         Wait(50);
     
+    char out;
     if (ButtonPressed(BTNLEFT, false)) 
-        return BTNLEFT;
+        out = BTNLEFT;
     else if (ButtonPressed(BTNRIGHT, false)) 
-        return BTNRIGHT;
+        out = BTNRIGHT;
     else
-        return BTNCENTER;
+        out = BTNCENTER;
+    
+    while (ButtonPressed(BTNLEFT, false) || ButtonPressed(BTNCENTER, false) || ButtonPressed(BTNRIGHT, false))
+        Wait(50);
+    
+    return out;
 }
 
 int NumberPicker(int defaultVal, string name, char min = 0, char max = 99) {
