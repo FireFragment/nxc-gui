@@ -100,3 +100,7 @@ int NumberPicker(int defaultVal, string name, char min = 0, char max = 99) {
         
     int maxVal = currentVal;
 }
+
+void Loading(unsigned char progress) {
+    LineOut(0, DISPLAY_HEIGHT - 1, progress, DISPLAY_HEIGHT - 1);
+}

@@ -1,7 +1,24 @@
+#define STRING_LESS "Less"
+#define STRING_OK   "OK"
+#define STRING_MORE "More"
+
 #include "nxc-gui.nxc"
 
 task main()
 {
+    // Loading sample
+    CornerDrawText("Working...", CORNER_CENTER, CORNER_CENTER);
+    Loading(25);
+    Wait(500);
+    Loading(50);
+    Wait(500);
+    Loading(75);
+    Wait(500);
+    ClearScreen();
+    Loading(100);
+    CornerDrawText("DONE!", CORNER_CENTER, CORNER_CENTER);
+    Wait(1000);
+    
     // NumberPicker sample
     NumberPicker(10, "Favorite number:", 0, 99);
     ClearScreen();
