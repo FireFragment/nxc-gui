@@ -72,13 +72,10 @@ int NumberPicker(int defaultVal, string name, char min = 0, char max = 99) {
         CornerDrawText("   ", CORNER_CENTER, CORNER_CENTER);
         CornerDrawText(NumToStr(currentVal), CORNER_CENTER, CORNER_CENTER);
         
-        // Wait for button press
-        while (!ButtonPressed(BTNLEFT, false) && !ButtonPressed(BTNCENTER, false) && !ButtonPressed(BTNRIGHT, false))
-            Wait(50);
-        
+        char pressed = WaitForButtonPress("", "", "");
         
         // Left button pressed
-        if (ButtonPressed(BTNLEFT, false) && currentVal > min) {
+        if (pressed == BTNLEFT && currentVal > min) {
             currentVal -= 1;
             
             ButtonLegend(STRING_LESS, STRING_OK, STRING_MORE);
@@ -86,7 +83,7 @@ int NumberPicker(int defaultVal, string name, char min = 0, char max = 99) {
                 ButtonLegend("    ", STRING_OK, STRING_MORE);
         }
         // Right button pressed
-        else if (ButtonPressed(BTNRIGHT, false) && currentVal < max) {
+        else if (pressed == BTNRIGHT && currentVal < max) {
             currentVal += 1;
             
             ButtonLegend(STRING_LESS, STRING_OK, STRING_MORE);
@@ -94,11 +91,8 @@ int NumberPicker(int defaultVal, string name, char min = 0, char max = 99) {
                 ButtonLegend(STRING_LESS, STRING_OK, "    ");
         }
         // Center button pressed
-        else if (ButtonPressed(BTNCENTER, false))
+        else if (pressed == BTNCENTER)
             return currentVal;
-        
-        while (ButtonPressed(BTNLEFT, false) || ButtonPressed(BTNCENTER, false) || ButtonPressed(BTNRIGHT, false))
-            Wait(50);
     }
         
     int maxVal = currentVal;
