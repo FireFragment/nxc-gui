@@ -20,7 +20,7 @@ task main()
     Wait(1000);
     
     // NumberPicker sample
-    NumberPicker(10, "Favorite number:", 0, 99);
+    NumberPicker(5, "Favorite number:", 0, 10);
     ClearScreen();
     
     // CornerDrawText sample

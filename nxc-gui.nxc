@@ -87,7 +87,7 @@ int NumberPicker(int defaultVal, string name, char min = 0, char max = 99) {
             currentVal += 1;
             
             ButtonLegend(STRING_LESS, STRING_OK, STRING_MORE);
-            if (currentVal <= min)
+            if (currentVal >= max)
                 ButtonLegend(STRING_LESS, STRING_OK, "    ");
         }
         // Center button pressed
