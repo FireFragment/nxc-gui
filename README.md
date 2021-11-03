@@ -12,12 +12,12 @@ Usage
 
 This is the easiest and quickest way to use this library.
 
-1. Copy `src/nxc-gui.nxc` file to your project directory.
+1. Copy `src` folder to your project directory and rename it to `nxc-gui`.
 
 2. Add following to the top of your main NXC file:  
    ```c
-   #include "nxc-gui/src/default-strings.nxc"
-   #include "nxc-gui/src/nxc-gui.nxc"
+   #include "nxc-gui/default-strings.nxc"
+   #include "nxc-gui/nxc-gui.nxc"
    ```
 3. Get inspired from `test.nxc`
 4. Use and enjoy!
@@ -37,6 +37,7 @@ If so, then:
    ```c
    #include "nxc-gui/src/default-strings.nxc"
    #include "nxc-gui/src/nxc-gui.nxc"
+   
    ```
 3. Get inspired from `test.nxc`
 4. Use and enjoy!
