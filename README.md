@@ -16,11 +16,8 @@ This is the easiest and quickest way to use this library.
 
 2. Add following to the top of your main NXC file:  
    ```c
-   #define STRING_LESS "Less" // Strings for NXC GUI library
-   #define STRING_OK   "OK"
-   #define STRING_MORE "More"
-   
-   #include "nxc-gui.nxc"
+   #include "nxc-gui/src/default-strings.nxc"
+   #include "nxc-gui/src/nxc-gui.nxc"
    ```
 3. Get inspired from `test.nxc`
 4. Use and enjoy!
@@ -38,10 +35,7 @@ If so, then:
 1. Run `git submodule add https://github.com/FireFragment/nxc-gui` in console
 2. Add following to the top of your main NXC file:  
    ```c
-   #define STRING_LESS "Less" // Strings for NXC GUI library
-   #define STRING_OK   "OK"
-   #define STRING_MORE "More"
-   
+   #include "nxc-gui/src/default-strings.nxc"
    #include "nxc-gui/src/nxc-gui.nxc"
    ```
 3. Get inspired from `test.nxc`
