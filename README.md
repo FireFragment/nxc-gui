@@ -8,7 +8,7 @@ The library uses [NXC display module](http://bricxcc.sourceforge.net/nbc/nxcdoc/
 Usage
 -----
 
-1. Copy `nxc-gui.nxc` file to your project directory.
+1. Copy `src/nxc-gui.nxc` file to your project directory.
 
 2. Add following to the top of your main NXC file:  
    ```c
