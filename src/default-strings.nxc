@@ -1,0 +1,11 @@
+// Theese string are in separate file, you can change them eg. to translate to other language.
+//
+// Example:
+//     #incldue "default-strings.nxc"
+//     #define STRING_OK "Done"
+//     #incldue "nxc-gui.nxc"
+
+
+#define STRING_LESS "Less"
+#define STRING_OK   "OK"
+#define STRING_MORE "More" 
