@@ -3,7 +3,7 @@
 // Example:
 //     #incldue "default-strings.nxc"
 //     #define STRING_OK "Done"
-//     #incldue "nxc-gui.nxc"
+//     #include "nxc-gui.nxc"
 
 
 #define STRING_LESS "Less"
