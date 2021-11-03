@@ -8,6 +8,10 @@ The library uses [NXC display module](http://bricxcc.sourceforge.net/nbc/nxcdoc/
 Usage
 -----
 
+### Using copy/paste
+
+This is the easiest and quickest way to use this library.
+
 1. Copy `src/nxc-gui.nxc` file to your project directory.
 
 2. Add following to the top of your main NXC file:  
@@ -18,7 +22,27 @@ Usage
    
    #include "nxc-gui.nxc"
    ```
-   
 3. Get inspired from `test.nxc`
+4. Use and enjoy!
 
+### Using git submodules
+
+This is better and cleaner way to use this library, but has some extra prerequisities.  
+**Prerequisities:**
+
+- Your project uses Git
+- You are familiar with Git submodules
+
+If so, then:
+
+1. Run `git submodule add https://github.com/FireFragment/nxc-gui` in console
+2. Add following to the top of your main NXC file:  
+   ```c
+   #define STRING_LESS "Less" // Strings for NXC GUI library
+   #define STRING_OK   "OK"
+   #define STRING_MORE "More"
+   
+   #include "nxc-gui/src/nxc-gui.nxc"
+   ```
+3. Get inspired from `test.nxc`
 4. Use and enjoy!
