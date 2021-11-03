@@ -1,7 +1,7 @@
 NXC GUI
 =======
 
-**GUI library for NXC to make your NXT programs more beautiful and user-friendly** 
+**GUI library for NXC to make your programs for Lego NXT more beautiful and user-friendly** 
 
 The library uses [NXC display module](http://bricxcc.sourceforge.net/nbc/nxcdoc/nxcapi/group___display_module.html) to render various UI components. 
 
@@ -22,4 +22,3 @@ Usage
 3. Get inspired from `test.nxc`
 
 4. Use and enjoy!
-
