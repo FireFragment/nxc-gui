@@ -2,7 +2,7 @@
 #define STRING_OK   "OK"
 #define STRING_MORE "More"
 
-#include "nxc-gui.nxc"
+#include "src/nxc-gui.nxc"
 
 task main()
 {
